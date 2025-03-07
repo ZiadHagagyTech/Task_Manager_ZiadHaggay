@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Ziad Hagagy</title>
+    <link rel="icon" type="image/jpg" href="https://i.ibb.co/B2jnz1Fs/8451586-3914790-removebg-preview.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="light-mode">
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <div class="mode-toggle">
+                <button id="light-mode-btn">Light Mode</button>
+                <button id="dark-mode-btn">Dark Mode</button>
+                <button id="black-mode-btn">Black Mode</button>
+            </div>
+        </header>
+        <main>
+            <section class="task-form">
+                <h2>Add New Task</h2>
+                <form id="task-form">
+                    <div class="form-group">
+                        <label for="task-title">Title</label>
+                        <input type="text" id="task-title" placeholder="Enter task title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-description">Description</label>
+                        <textarea id="task-description" placeholder="Enter task description"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-due-date">Due Date</label>
+                        <input type="date" id="task-due-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="task-color">Choose Color</label>
+                        <div id="color-picker" class="color-picker">
+                            <div class="color-option" data-color="#ffffff" style="background-color: #ffffff;"></div>
+                            <div class="color-option" data-color="#f28b82" style="background-color: #f28b82;"></div>
+                            <div class="color-option" data-color="#fbbc04" style="background-color: #fbbc04;"></div>
+                            <div class="color-option" data-color="#fff475" style="background-color: #fff475;"></div>
+                            <div class="color-option" data-color="#a7ffeb" style="background-color: #a7ffeb;"></div>
+                            <div class="color-option" data-color="#cbf0f8" style="background-color: #cbf0f8;"></div>
+                            <div class="color-option" data-color="#aecbfa" style="background-color: #aecbfa;"></div>
+                            <div class="color-option" data-color="#d7aefb" style="background-color: #d7aefb;"></div>
+                            <div class="color-option" data-color="#fdcfe8" style="background-color: #fdcfe8;"></div>
+                            <div class="color-option" data-color="#e6c9a8" style="background-color: #e6c9a8;"></div>
+                            <div class="color-option" data-color="#e8eaed" style="background-color: #e8eaed;"></div>
+                            <input type="hidden" id="task-color" value="#ffffff">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit"><i class="fas fa-plus"></i> Add Task</button>
+                </form>
+            </section>
+            <section class="task-list">
+                <h2>Task List</h2>
+                <ul id="task-list"></ul>
+            </section>
+            <section class="completed-tasks">
+                <h2>Completed Tasks</h2>
+                <ul id="completed-task-list"></ul>
+            </section>
+            <section class="task-stats">
+                <h2>Task Statistics</h2>
+                <div id="task-stats"></div>
+                <button id="clear-tasks" class="btn-clear"><i class="fas fa-trash-alt"></i> Clear All Tasks</button>
+            </section>
+        </main>
+        <div id="motivation-message" class="hidden">
+            <p>Great job! Keep up the good work!</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Task Manager | Designed by <strong>Ziad Hagagy</strong></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
